@@ -1,6 +1,6 @@
 # AgendaTelefonica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+Este proyecto es una muestra de conceptos para los alumnos de Tecnicatura en programación de la universidad Austral. La idea es que lo usen de referencia por si tienen problemas.
 
 ## Development server
 
