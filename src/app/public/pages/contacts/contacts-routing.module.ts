@@ -5,6 +5,10 @@ import { ContactsComponent } from './contacts.component';
 const routes: Routes = [{
   path: '',
   component: ContactsComponent
+},
+{
+  path: 'contacts/:id',
+  loadChildren: ()=> import('../contact-details/contact-details.module').then(m => m.ContactDetailsModule),
 }];
 
 @NgModule({
