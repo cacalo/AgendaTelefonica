@@ -1,0 +1,8 @@
+<div *ngIf="edit">
+    <label for="{{fieldLabel}}">{{fieldLabel}}</label>
+    <input type="text" name="{{fieldLabel}}" [(ngModel)]="content">
+</div>
+<div *ngIf="!edit">
+    <p>{{content}}</p>
+    <button (click)="edit=true">Edit</button>
+</div>

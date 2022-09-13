@@ -7,8 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContactDetailsComponent implements OnInit {
 
-  @Input() editMode:boolean = false;
-  fieldsToEdit: string[] = []
+  @Input() editMode:boolean = true;
 
   constructor() { }
 
@@ -17,12 +16,8 @@ export class ContactDetailsComponent implements OnInit {
     
   }
 
-  toggleEdit(field:string){
-    if(this.fieldsToEdit.includes(field)){
-      
-    } else {
-      this.fieldsToEdit.push(field)
-    }
+  save(){
+    this.editMode = false;
   }
 
 }

@@ -1,10 +1,19 @@
-<form>
-    <label for="firstName">First Name</label>
-    <input type="text" name="firstName">
-    <label for="lastName">Last Name</label>
-    <input type="text" name="lastName">
-    <label for="telephone">Phone number</label>
-    <input type="text" name="telephone">
-    <button type="submit">Save</button>
-    <button type="submit">Go back</button>
+<form (ngSubmit)="save()">
+    <app-editable-input
+    [fieldLabel]="'First Name'"
+    [fieldName]="'firstName'"
+    [edit]="editMode"
+    ></app-editable-input>
+    <app-editable-input
+    [fieldLabel]="'Last Name'"
+    [fieldName]="'lastName'"
+    [edit]="editMode"
+    ></app-editable-input>
+    <app-editable-input
+    [fieldLabel]="'Phone number'"
+    [fieldName]="'telephone'"
+    [edit]="editMode"
+    ></app-editable-input>
+
+    <button type="submit" *ngIf="editMode">Save</button>
 </form>
