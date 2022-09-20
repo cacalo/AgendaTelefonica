@@ -1,10 +1,10 @@
 <div id="container">
     <div id="left">
-        <p id="name">{{contact.firstName}} {{contact.lastName}}</p>
-        <span id="telephoneNumber">{{contact.phoneNumber}}</span>
+        <p id="name">{{contact.username}} {{contact.company?.name}}</p>
+        <span id="telephoneNumber">{{contact.phone}}</span>
     </div>
     <div id="right">
         <button>Llamar</button>
-        <a href="https://wa.me/{{contact.phoneNumber}}" target="_blank">WP</a>
+        <a href="https://wa.me/{{contact.phone}}" target="_blank">WP</a>
     </div>
 </div>
