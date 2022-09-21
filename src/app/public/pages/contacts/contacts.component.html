@@ -1,6 +1,10 @@
-<button [routerLink]="['/login']">LOGIN</button>
-<button [routerLink]="['/contacts/12']">New contact</button>
+<div id="container">
+<button [routerLink]="['/login']">LOGIN (BORRAR DESPUES)</button>
+<button [routerLink]="['/contacts/12']">+ New contact</button>
 
-<app-contact-card *ngFor="let contact of contactsData"
-[contact]="contact">
+<app-contact-card
+  *ngFor="let contact of contactsData"
+  [contact]="contact"
+  >
 </app-contact-card>
+</div>

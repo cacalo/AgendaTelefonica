@@ -11,6 +11,11 @@
     border: 1px solid gray;
     display: flex;
     justify-content: space-between;
+    transition: 40ms ease-in-out;
+    cursor: pointer;
+    &:hover{
+      background-color: antiquewhite;
+    }
 }
 
 #right{
@@ -18,4 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    #wp{
+      height: 30px;
+    }
 }

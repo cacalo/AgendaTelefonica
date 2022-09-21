@@ -1,0 +1,6 @@
+$max-width-container: 800px;
+
+@mixin limit-container($radius: $max-width-container) {
+  max-width: $radius;
+  margin: auto;
+}

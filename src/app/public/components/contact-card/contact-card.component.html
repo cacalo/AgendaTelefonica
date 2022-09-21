@@ -1,10 +1,10 @@
 <div id="container">
     <div id="left">
-        <p id="name">{{contact.username}} {{contact.company?.name}}</p>
+        <p id="name" [routerLink]="['contacts',contact.id]">{{contact.username}} {{contact.company?.name}}</p>
         <span id="telephoneNumber">{{contact.phone}}</span>
     </div>
     <div id="right">
-        <button>Llamar</button>
-        <a href="https://wa.me/{{contact.phone}}" target="_blank">WP</a>
+        <a href="tel:{{contact.phone}}"><img id="wp" src="./../../../../assets/icons/call.png"></a>
+        <a href="https://wa.me/{{contact.phone}}" target="_blank"><img id="wp" src="./../../../../assets/icons/whatsapp.png"></a>
     </div>
 </div>
