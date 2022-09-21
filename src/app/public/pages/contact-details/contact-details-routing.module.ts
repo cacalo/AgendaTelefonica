@@ -3,9 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactDetailsComponent } from './contact-details.component';
 
 const routes: Routes = [{
-  path: '',
-  component: ContactDetailsComponent  
-}]
+  path: 'new',
+  component: ContactDetailsComponent
+},{
+  path: ':id',
+  component: ContactDetailsComponent
+}
+  ]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
