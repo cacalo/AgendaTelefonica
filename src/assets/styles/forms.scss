@@ -1,0 +1,35 @@
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+h1{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  //height: 80vh;
+  & .inputs{
+    width: 80%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+input{
+  padding:10px;
+}
+
+button{
+  padding: 5px;
+  margin: 5px;
+}

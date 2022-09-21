@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div id="container">
+  <h1>Agenda de contactos</h1>
+  <form (ngSubmit)="login()">
+    <div class="inputs">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" autocomplete="email" placeholder="Type your email address">
+    </div>
+    <div class="inputs">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" autocomplete="current-password" placeholder="Type your password">
+    </div>
+    <div>
+      <button type="submit">Log In</button>
+      <button type="button" [routerLink]="['signin']">Sign In</button>
+    </div>
+  </form>
+</div>
