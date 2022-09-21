@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
+import { UserService } from 'src/app/core/services/user.service';
 import { contactsData } from 'src/assets/mockData/data';
 
 @Component({
@@ -11,18 +12,14 @@ export class ContactsComponent implements OnInit {
 
   contactsData:ContactJsonPlaceholder[] = [];
 
-  constructor() { }
-
+  constructor(private us:UserService) { }
 
   ngOnInit(): void {
     this.getData()
   }
-  
-  async getData(){
-    const data = await fetch('https://jsonplaceholder.typicode.com/users');
-    const dataJson = await data.json();
-    this.contactsData = dataJson;
-  }
 
+  async getData(){
+    this.contactsData = await this.us.getUsers()
+  }
 
 }

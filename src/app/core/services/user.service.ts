@@ -7,4 +7,13 @@ export class UserService {
 
   constructor() { }
 
+  getUserDetails(id:number){
+
+  }
+
+  async getUsers(){
+    const data = await fetch('https://jsonplaceholder.typicode.com/users');
+    return await data.json();
+  }
+
 }
