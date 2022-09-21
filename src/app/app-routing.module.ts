@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: ()=> import('./public/pages/login/login.module').then(m => m.LoginModule)
   },
+  {
+    path: 'contacts/:id',
+    loadChildren: ()=> import('./public/pages/contact-details/contact-details.module').then(m => m.ContactDetailsModule)
+  },
 ];
 
 @NgModule({
