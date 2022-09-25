@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Contact, ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
+import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
 import { UserService } from 'src/app/core/services/user.service';
 
 @Component({

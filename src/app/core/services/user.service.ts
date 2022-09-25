@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { reduce } from 'rxjs';
-import { ContactJsonPlaceholder, defaultContact } from '../interfaces/contacts';
+import { ContactJsonPlaceholder } from '../interfaces/contacts';
 
 @Injectable({
   providedIn: 'root',
