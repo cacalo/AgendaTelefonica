@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-editable-input',
@@ -12,7 +12,9 @@ export class EditableInputComponent implements OnInit {
   @Input() edit = true;
   @Input() fieldName = '';
   @Input() fieldLabel = '';
-  content: string = '';
+  @Input() content: string = '';
+
+  @Output() onValueSaved = new EventEmitter<string>();
 
   ngOnInit(): void {
   }

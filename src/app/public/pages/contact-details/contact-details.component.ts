@@ -39,6 +39,10 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
 
   save(){
     this.editMode = false;
+    // Guardar datos en la API
+    // this.us.editContact(this.contact)
+    // Si es usuario nuevo
+    // this.us.addContact(this.contact);
   }
 
 }

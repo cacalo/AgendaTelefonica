@@ -1,8 +1,12 @@
-<div *ngIf="edit">
-    <label for="{{fieldLabel}}">{{fieldLabel}}</label>
-    <input type="text" name="{{fieldLabel}}" [(ngModel)]="content">
-</div>
-<div *ngIf="!edit">
-    <p>{{content}}</p>
-    <button (click)="edit=true">Edit</button>
+<div>
+  <div *ngIf="edit" class="container">
+    <label for="{{ fieldLabel }}">{{ fieldLabel }}:</label>
+    <input type="text" name="{{ fieldLabel }}" [(ngModel)]="content" />
+    <button (click)="edit = false">Save</button>
+  </div>
+  <div *ngIf="!edit" class="container">
+    <label for="{{ fieldLabel }}">{{ fieldLabel }}:</label>
+    <p>{{ content }}</p>
+    <button (click)="edit = true">Edit</button>
+  </div>
 </div>
