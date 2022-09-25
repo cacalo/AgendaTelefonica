@@ -1,6 +1,15 @@
+@use "sass:color";
+
 $max-width-container: 800px;
 
 @mixin limit-container($radius: $max-width-container) {
   max-width: $radius;
   margin: auto;
 }
+
+$color-primary: rgb(182, 186, 255);
+$color-primary-light: color.scale($color-primary,$lightness: 70%);
+$color-primary-dark:  color.scale($color-primary,$lightness: -30%);
+$color-secondary: rgb(255, 237, 237);
+$color-text: rgb(29, 29, 29);
+$color-text-inverted: rgb(236, 236, 236);

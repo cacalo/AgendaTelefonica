@@ -1,0 +1,17 @@
+@use "./variables.scss";
+
+.roundButton{
+  padding: 10px;
+  width: 3rem;
+  height: 3rem;
+  background-color: variables.$color-primary;
+  border-radius: 25px;
+  border: 1px solid variables.$color-text;
+  font-weight: bold;
+  text-align: center;
+  transition: 100ms;
+  &:hover{
+    background-color: variables.$color-primary-dark;
+    color: variables.$color-text-inverted;
+  }
+}

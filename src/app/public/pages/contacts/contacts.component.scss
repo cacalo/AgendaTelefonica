@@ -1,5 +1,21 @@
 @use './../../../../assets/styles/variables.scss';
+@use './../../../../assets/styles/buttons.scss';
 
 #container{
   @include variables.limit-container;
+}
+
+#addContact{
+  font-size: larger;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+main{
+  overflow-y: auto;
+  height: calc(100vh - 50px);
 }
