@@ -4,16 +4,16 @@ import { ContactJsonPlaceholder } from '../interfaces/contacts';
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class ContactService {
   constructor() {}
 
-  async getUserDetails(id: number): Promise<ContactJsonPlaceholder> {
-    const jsonData = await this.getUsers();
-    const user = jsonData.filter((user) => user.id == id);
-    return user.length > 0 ? user[0] : {};
+  async getContactDetails(id: number): Promise<ContactJsonPlaceholder> {
+    const jsonData = await this.getContacts();
+    const contact = jsonData.filter((contact) => contact.id == id);
+    return contact.length > 0 ? contact[0] : {};
   }
 
-  async getUsers(): Promise<ContactJsonPlaceholder[]> {
+  async getContacts(): Promise<ContactJsonPlaceholder[]> {
     const data = await fetch('https://jsonplaceholder.typicode.com/users');
     return await data.json();
   }

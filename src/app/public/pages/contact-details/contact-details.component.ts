@@ -2,7 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ContactJsonPlaceholder } from 'src/app/core/interfaces/contacts';
-import { UserService } from 'src/app/core/services/user.service';
+import { ContactService } from 'src/app/core/services/contact.service';
 
 @Component({
   selector: 'app-contact-details',
@@ -15,7 +15,7 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   contact: ContactJsonPlaceholder = {};
   subs: Subscription[] = []
 
-  constructor(private ar:ActivatedRoute, private us:UserService) { }
+  constructor(private ar:ActivatedRoute, private cs:ContactService) { }
 
   ngOnInit(): void {
     const sub = this.ar.params.subscribe(params =>{
@@ -34,7 +34,7 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   }
 
   async getUserData(id:number){
-    this.contact = await this.us.getUserDetails(id);
+    this.contact = await this.cs.getContactDetails(id);
   }
 
   save(){
