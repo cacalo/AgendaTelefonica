@@ -45,7 +45,7 @@ export class ContactService {
   }
 
   async deleteContact(id:number):Promise<boolean>{
-    const res = await fetch(BACKEND_URL+'/api/Contact', {
+    const res = await fetch(BACKEND_URL+'/api/Contact'+id, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
