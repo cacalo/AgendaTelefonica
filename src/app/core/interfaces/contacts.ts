@@ -1,13 +1,13 @@
 export interface Contact {
-    firstName: string,
-    lastName: string,
-    phoneNumber: string,
+    name: string,
+    celularNumber?: string,
+    telephoneNumber?: string
 }
 
 export const defaultContact:Contact = {
-    firstName: "First name",
-    lastName: "Last Name",
-    phoneNumber: "+5412345678"
+    name: "First name",
+    celularNumber: "+5412345678",
+    telephoneNumber: "0123465"
 }
 
 
