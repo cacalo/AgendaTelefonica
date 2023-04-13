@@ -4,7 +4,9 @@
   <button (click)="logOut()">Log Out</button>
 </header>
 
-<main id="container">
+<h1 *ngIf="contactsData.length == 0">CARGANDO</h1>
+
+<main id="container" *ngIf="contactsData.length > 0">
   <app-contact-card
     *ngFor="let contact of contactsData"
     [contact]="contact"

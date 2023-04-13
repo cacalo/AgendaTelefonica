@@ -38,6 +38,7 @@ export class ContactService {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
+        'Authentication' : this.auth.getSession().token!
       },
       body: JSON.stringify(contact),
     });
